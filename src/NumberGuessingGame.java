@@ -22,6 +22,8 @@ public class NumberGuessingGame {
         else if (guessedNumber<pickedNumber){System.out.println("Too low! Try again.");}
 
         if (guessedNumber==pickedNumber){System.out.println("You win!");}
+        
+        //make sure to use while statements
 
 
 
