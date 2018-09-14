@@ -21,7 +21,10 @@ public class NumberGuessingGame {
             if (guessedNumber>pickedNumber){System.out.println("Too high! Try again."); tries+=1;guessedNumber = keyboard.nextInt();}
             else if (guessedNumber<pickedNumber){System.out.println("Too low! Try again."); tries+=1;guessedNumber = keyboard.nextInt();}}
 
-            if (guessedNumber==pickedNumber){tries+=1;System.out.println("You win! And it only took you "+tries+" tries!");}
+        if (guessedNumber==pickedNumber){tries+=1;System.out.println("You win! And it only took you "+tries+" tries!");}
+
+
+
 
 
 
