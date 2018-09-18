@@ -14,7 +14,7 @@ public class NumberGuessingGame {
 
         pickedNumber = (int)(Math.random()*100);
 
-        /*Temporary*/ System.out.println(pickedNumber);
+        /*Temporary*/ //System.out.println(pickedNumber);
 
         System.out.println("Pick a number between 1 and 100");
         guessedNumber = keyboard.nextInt();
