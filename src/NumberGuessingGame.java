@@ -10,11 +10,10 @@ public class NumberGuessingGame {
         int pickedNumber, guessedNumber, tries;
         tries = 0;
         String response;
-        response = "yes";
 
         pickedNumber = (int)(Math.random()*100);
 
-        /*Temporary*/ //System.out.println(pickedNumber);
+        //System.out.println(pickedNumber);
 
         System.out.println("Pick a number between 1 and 100");
         guessedNumber = keyboard.nextInt();
@@ -25,11 +24,18 @@ public class NumberGuessingGame {
                 if (guessedNumber < pickedNumber){System.out.println("Too low! Try again");
                     guessedNumber = keyboard.nextInt(); tries+=1;}
                 else if(guessedNumber>pickedNumber){System.out.println("Too high! Try again");
-                    guessedNumber = keyboard.nextInt(); tries+=1;}
-            }
+                    guessedNumber = keyboard.nextInt(); tries+=1;}}
 
-            if(guessedNumber==pickedNumber){
+            if (guessedNumber==pickedNumber){
+                tries+=1;
                 System.out.println("You Win! And it only took you "+tries+" tries.");}
+
+
+
+
+
+
+
 
 
 
