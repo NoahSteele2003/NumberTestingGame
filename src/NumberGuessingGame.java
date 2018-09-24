@@ -62,7 +62,7 @@ public class NumberGuessingGame {
 
         if(response.equals("no")){
             average = (totalTries/attempts);
-            System.out.println("Ok, your average was "+average+" tries per attempt.");
+            System.out.println("Ok, your average was "+average+" tries per game.");
         }
 
 
