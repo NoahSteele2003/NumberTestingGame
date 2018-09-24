@@ -3,8 +3,11 @@ import java.util.Scanner;
 public class NumberGuessingGame {
     public static void main(String[] args){
 
-        int pickedNumber, guessedNumber, tries;
+        int pickedNumber, guessedNumber, tries, average, totalTries, attempts;
         tries = 0;
+        average= 0;
+        totalTries = 0;
+        attempts = 0;
         String response;
 
         Scanner keyboard;
@@ -27,6 +30,8 @@ public class NumberGuessingGame {
 
         if (guessedNumber==pickedNumber){
             tries+=1;
+            totalTries = tries;
+            attempts +=1;
             System.out.println("You Win! And it only took you "+tries+" tries.");}
 
         System.out.println("Would you like to play again?");
@@ -34,6 +39,7 @@ public class NumberGuessingGame {
 
         while(response.equals("yes")){
             pickedNumber = (int)(Math.random()*100);
+            //System.out.println(pickedNumber);
             tries = 0;
             System.out.println("Pick a number between 1 and 100.");
             guessedNumber=keyboard.nextInt();
@@ -45,6 +51,8 @@ public class NumberGuessingGame {
 
             if (guessedNumber==pickedNumber){
                 tries+=1;
+                totalTries += tries;
+                attempts += 1;
                 System.out.println("You Win! And it only took you "+tries+" tries.");}
 
             System.out.println("Would you like to play again?");
@@ -53,7 +61,8 @@ public class NumberGuessingGame {
 
 
         if(response.equals("no")){
-            System.out.println("Ok then.");
+            average = (totalTries/attempts);
+            System.out.println("Ok, your average was "+average+" tries per attempt.");
         }
 
 
