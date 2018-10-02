@@ -5,6 +5,9 @@ public class NumberGuessingGame {
     public static void main(String[] args){
 
         int pickedNumber, guessedNumber, tries, average, totalTries, attempts;
+        int difficulty, chosen;
+        difficulty = 0;
+        pickedNumber = 0;
         tries = 0;
         average= 0;
         totalTries = 0;
@@ -14,11 +17,21 @@ public class NumberGuessingGame {
         Scanner keyboard;
         keyboard= new Scanner(System.in);
 
-        pickedNumber = (int)(Math.random()*100);
+        System.out.println("Chose one of the four difficulties.(1 being easy, 2 being normal, 3 being hard, and 4 being extreme)");
+        chosen = keyboard.nextInt();
 
-        //System.out.println(pickedNumber);
+        if(chosen==1){difficulty =50;}
+        if(chosen==2){difficulty=100;}
+        if(chosen==3){difficulty=150;}
+        if(chosen==4){difficulty=200;}
 
-        System.out.println("Pick a number between 1 and 100");
+        pickedNumber = (int)(Math.random()*difficulty);
+
+            //System.out.println(pickedNumber);
+
+
+
+        System.out.println("Pick a number between 1 and "+difficulty);
         guessedNumber = keyboard.nextInt();
 
 
@@ -39,10 +52,16 @@ public class NumberGuessingGame {
         response = keyboard.next();
 
         while(response.equals("yes")){
-            pickedNumber = (int)(Math.random()*100);
+            System.out.println("Chose one of the four difficulties.(1 being easy, 2 being normal, 3 being hard, and 4 being extreme)");
+            chosen = keyboard.nextInt();
+            if(chosen==1){difficulty=50;}
+            if(chosen==2){difficulty=100;}
+            if(chosen==3){difficulty=150;}
+            if(chosen==4){difficulty=200;}
+            pickedNumber = (int)(Math.random()*difficulty);
             //System.out.println(pickedNumber);
             tries = 0;
-            System.out.println("Pick a number between 1 and 100.");
+            System.out.println("Pick a number between 1 and "+difficulty);
             guessedNumber=keyboard.nextInt();
             while (guessedNumber!=pickedNumber){
                 if (guessedNumber < pickedNumber){System.out.println("Too low! Try again");
