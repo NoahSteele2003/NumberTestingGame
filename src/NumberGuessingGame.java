@@ -26,7 +26,7 @@ public class NumberGuessingGame {
             if(chosen==3){difficulty=150;}
             if(chosen==4){difficulty=200;}
             pickedNumber = (int)(Math.random()*difficulty);
-            System.out.println(pickedNumber);
+            //System.out.println(pickedNumber);
             tries = 0;
             System.out.println("Pick a number between 1 and "+difficulty);
             guessedNumber=keyboard.nextInt();
