@@ -4,6 +4,9 @@ public class NumberGuessingGame {
 
     public static void main(String[] args){
 
+        Scanner keyboard;
+        keyboard= new Scanner(System.in);
+
         int pickedNumber, guessedNumber, tries;
         int difficulty, chosen;
         int average, totalTries, attempts;
@@ -15,8 +18,7 @@ public class NumberGuessingGame {
         attempts = 0;
         String response = "yes";
 
-        Scanner keyboard;
-        keyboard= new Scanner(System.in);
+
 
         while(response.equals("yes")){
             System.out.println("Chose one of the four difficulties.(1 being easy, 2 being normal, 3 being hard, and 4 being extreme)");
